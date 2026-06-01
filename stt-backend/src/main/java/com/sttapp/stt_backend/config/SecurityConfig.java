@@ -14,7 +14,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import java.util.List;
@@ -58,11 +57,11 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
     
-        config.setAllowedOrigins(List.of(
-                "http://localhost:5173",
-                "https://speech-to-text-three-gold.vercel.app",
-                "https://speech-to-text-9pxcgual7-shubh-shu-projects.vercel.app",
-                "https://speech-to-text-*.vercel.app"
+        config.setAllowedOriginPatterns(List.of(
+            "http://localhost:5173",
+            "https://speech-to-text-three-gold.vercel.app",
+            "https://speech-to-text-*.vercel.app",
+            "https://*.vercel.app"
         ));
     
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
