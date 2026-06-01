@@ -60,7 +60,9 @@ public class SecurityConfig {
     
         config.setAllowedOrigins(List.of(
                 "http://localhost:5173",
-                "https://speech-to-text-three-gold.vercel.app"
+                "https://speech-to-text-three-gold.vercel.app",
+                "https://speech-to-text-9pxcgual7-shubh-shu-projects.vercel.app",
+                "https://speech-to-text-*.vercel.app"
         ));
     
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
