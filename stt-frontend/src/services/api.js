@@ -3,7 +3,7 @@ import axios from "axios";
 
 // ✅ Points to your Spring Boot backend
 const API = axios.create({
-  baseURL: "http://localhost:8080/api",
+  baseURL: import.meta.env.VITE_API_BASE_URL,
 });
 
 // ─── Attach JWT token to every request automatically ──
