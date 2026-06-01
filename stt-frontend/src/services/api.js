@@ -16,12 +16,12 @@ API.interceptors.request.use((config) => {
 });
 
 // ─── AUTH APIs ────────────────────────────────────────
-export const registerUser = (data) => API.post("api/auth/register", data);
-export const loginUser    = (data) => API.post("api/auth/login", data);
+export const registerUser = (data) => API.post("/api/auth/register", data);
+export const loginUser    = (data) => API.post("/api/auth/login", data);
 
 // ─── SPEECH APIs ──────────────────────────────────────
-export const uploadAudio       = (formData) => API.post("/speech/upload", formData);
-export const getHistory        = ()         => API.get("/speech/history");
-export const getTranscriptById = (id)       => API.get(`/speech/${id}`);
-export const deleteTranscript  = (id)       => API.delete(`/speech/${id}`);
-export const generateSummary = (data) => API.post("/speech/summary", data);
+export const uploadAudio       = (formData) => API.post("/api/speech/upload", formData);
+export const getHistory        = ()         => API.get("/api/speech/history");
+export const getTranscriptById = (id)       => API.get(`/api/speech/${id}`);
+export const deleteTranscript  = (id)       => API.delete(`/api/speech/${id}`);
+export const generateSummary = (data) => API.post("/api/speech/summary", data);
